@@ -7,6 +7,14 @@ const routes = [
     ],
   },
 
+  {
+    path: '/apogee',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/ShipPage.vue') },
+    ],
+  },
+
   // Always leave this as last one,
   // but you can also remove it
   {
